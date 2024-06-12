@@ -1,0 +1,1775 @@
+                                                        @@@@@@@@@
+----------------------------------------------------------Arrays:--------------------------------------------------------------------------------
+	                                                %%%%%%%%%
+How to declare and Initialize the Array in both static and Dynamic ways and how it stores internally.
+
+
+//3.Print all even numbers from array...........................................
+
+import java.util.Scanner
+class Main
+{
+    public static void main (String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        int size=obj.nextInt();//size of array enter size
+        int a[] =new int[size];
+        for(int i=0;i<size;i++)
+        {
+            a[i]=obj.nextInt();
+        }
+        for(int i=0;i<size;i++)
+        {
+            if(a[i]%2==0)
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+
+//3.Print all odd numbers from array...............................................
+
+import java.util.Scanner;
+class Main
+{
+    public static void main (String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        int size=obj.nextInt();//size of array enter size
+        int a[] =new int[size];
+        for(int i=0;i<size;i++)
+        {
+            a[i]=obj.nextInt();
+        }
+        for(int i=0;i<size;i++)
+        {
+            if(a[i]%2!=0)
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+
+//4.Find the sum of all odd numbers from array.............................................
+
+import java.util.Scanner;
+class Main
+{
+    public static void main (String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        int size=obj.nextInt();//size of array enter size
+        int sum=0;
+        int a[] =new int[size];
+        for(int i=0;i<size;i++)
+        {
+            a[i]=obj.nextInt();
+        }
+        for(int i=0;i<size;i++)
+        {
+            if(a[i]%2!=0)
+            sum+=a[i];
+        }
+        System.out.print(sum+" ");
+    }
+}
+
+//5.Find the average of all array elements..................................................
+
+import java.util.Scanner;
+class Main
+{
+    public static void main (String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        int size=obj.nextInt();//size of array enter size
+        int sum=0,c=0;
+        int a[] =new int[size];
+        for(int i=0;i<size;i++)
+        {
+            a[i]=obj.nextInt();
+             sum+=a[i];
+             c++;
+        }
+        
+        System.out.print(sum/c+" ");
+    }
+}
+
+//6.Find the average of all prime numbers from array............................................
+
+import java.util.Scanner;
+class Main
+{
+    public static void main (String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        int size=obj.nextInt();//size of array enter size
+        int sum=0,c=0,c1=0;
+        int a[] =new int[size];
+        for(int i=0;i<size;i++)
+        {
+            a[i]=obj.nextInt();
+             for(int j=2;j<a[i];j++)
+             {
+                 if(a[i]%j==0)
+                 {
+                     c++;
+                 }
+             }
+             if(c==0)
+             {
+                 sum+=a[i];
+                 c1++;
+             }
+        }
+        
+        System.out.print(sum/c1+" ");
+    }
+}
+
+//7.Print array in reverse order..............................................
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+      Scanner obj=new Scanner(System.in);
+      int size =obj.nextInt();
+      int a[] =new int[size];
+      for(int i=0; i<size;i++)
+      {
+          a[i]=obj.nextInt();
+      }
+      for(int j=size-1;j>=0;j--)
+      {
+          System.out.print(a[j]+"");
+      }
+	}
+}
+
+//8.Find the sum of first and last element in array.......................................
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+      Scanner obj=new Scanner(System.in);
+      int size =obj.nextInt();
+      int a[] =new int[size];
+      for(int i=0; i<size;i++)
+      {
+          a[i]=obj.nextInt();
+      }
+      int sum =a[0]+a[size-1];
+      System.out.println(sum);
+	}
+}
+//9.Swap every two elements in array.................................................
+ 
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+      Scanner obj=new Scanner(System.in);
+      int size =obj.nextInt();
+      int a[] =new int[size];
+      for(int i=0; i<size;i++)
+      {
+          a[i]=obj.nextInt();
+      }
+      for(int i=0; i<(size-1);i=i+2)
+      {
+           int t=a[i];
+           a[i]=a[i+1];
+           a[i+1]=t;
+      }
+      for(int i=0; i<size;i++)
+      {
+         System.out.print(a[i]);
+      }
+      
+	}
+}
+
+//10.Print alternative even numbers from array............................................
+Input:	6
+		6 8 4 5 2 9
+Output:6 4
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int c=0;
+		for(int i=0;i<n;i++)
+		{
+			if(a[i]%2==0)
+			{
+				c++;
+				if(c%2==1)
+				System.out.print(a[i]+" ");
+			}
+		}
+	}
+}
+
+//11.Find the sum of the numbers upto the given key value(index) in a given array................................................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int c=sc.nextInt();int sum=0;
+		for(int i=0;i<c;i++)
+		{
+			sum=sum+a[i];		
+		
+		}
+			System.out.print(sum);
+	}
+}
+			
+
+//12.Find all possible sets of the sum of any two elements in an array is equal to the given key value(Sum Value)....................................................
+Ex: Input: 6 , {4,6,18,10,14,2} ,20	 output: {6,14},{18,2}.
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int c=sc.nextInt();
+		for(int i=0;i<n;i++)
+		{
+			for(int j=i+1;j<n;j++){
+			if(a[i]+a[j]==c)
+				System.out.print(a[i]+"  "+a[j]);
+			}		
+		
+		}
+			
+	}
+}
+
+//13.Find the sum of the same position values in a given two arrays..............................................	
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]at)
+	{
+	 Scanner sc=new Scanner(System.in);
+	  int n=sc.nextInt();
+	  int []a=new int[n];
+	  	for(int i=0;i<n;i++)
+		{
+		 a[i]=sc.nextInt();
+		}
+		int m=sc.nextInt();
+		int b[]=new int[m];
+		for(int i=0;i<m;i++)
+		{
+		  b[i]=sc.nextInt();
+		}
+		for(int i=0;i<n&&i<m;i++){
+			
+			System.out.print(a[i]+b[i]+" ");
+			
+			}
+
+		if(n>m)
+		{
+			for(int i=m;i<n;i++)
+			{
+			 System.out.print(a[i]+" "); 
+			}
+		}
+		else
+		{
+			for(int i=n;i<m;i++)
+			{
+			 System.out.print(b[i]+" ");
+			}
+		}
+	}
+}		
+
+-------------------------------------------------------------------Use Cases---------------------------------------------------------------------
+
+//1.Reverse the given array and print. (Not just print, reverse array elements)
+Ex:- input:-{ 11 34 67}
+	Output:- { 76 43 11}................................................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		int c=0;
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		for(int i=n-1;i>=0;i--)
+		{	int sum=0;
+			while(a[i]>0)
+			{
+				int r=a[i]%10;
+				sum=sum*10+r;
+				a[i]=a[i]/10;
+			}
+			c++;
+			if(c==1)
+			System.out.print("{"+sum);
+			else 
+			System.out.print(" "+sum);
+			
+		}
+		System.out.print("}");
+	}
+}
+			
+
+//2.Input: {3,4,2,1,3,5}, Output: {3,16,8,1,243,15625}
+Explanation : {,}={3,16,8,1,243,15625}....................................................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		int c=0,sum=1,d=0;
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		for(int i=0;i<n;i++)
+		{
+			c++;
+			sum=1;
+			for(int j=1;j<=c;j++)
+			{
+				sum=sum*a[i];
+			}
+			d++;
+			if(d==1)
+			System.out.print("{"+sum);
+			else 
+			System.out.print(","+sum);
+
+			
+		}
+		System.out.print("}");
+	}
+}	
+
+//3.Input: 84, Output: {1,0,1,0,1,0,0}. Decimal to Binary conversion................................
+
+import java.util.Scanner;
+class S
+{
+	public static void main(String[]args)
+	{
+		 Scanner sc=new Scanner(System.in);
+		 int n=sc.nextInt();
+		String s="";
+		while(n>0)
+		{
+			s=n%2+s;
+			n=n/2;		
+		}
+		char c[]=new char[s.length()];
+		int j=0;
+		for(int i=0;i<s.length();i++)
+		{
+			 c[j]=s.charAt(i);
+			j++;
+		}
+		//char c[]=s.toCharArray();
+		for(int i=0;i<s.length();i++)
+		{
+			System.out.print(c[i]+" ");
+	}
+	}
+}
+
+//4.Remove an element from array.............................		
+
+class A{
+    public static void main(String args []){
+        java.util.Scanner sc= new java.util.Scanner(System.in);
+        int n=sc.nextInt();
+        int [] a= new int [n];
+        
+        for(int i=0;i<n;i++){ a[i]=sc.nextInt(); }
+        int c=sc.nextInt();
+       int [] b = new int [n-1];
+        for(int i=0;i<n;i++)
+{
+            if(c!=a[i]){
+                b[i]=a[i];
+            }
+        }
+        for(int i=0;i<n-1;i++){
+            System.out.print(b[i]+"  ");
+        }
+    }
+}	
+
+//5.Input: Character array {‘c’,’v’,’c’,’o’,’r’,’p’}, output:1 (Number of vowels).......................................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		char a[]=new char[n];
+		int c=0;
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.next().charAt(0);
+		}
+		for(int i=0;i<n;i++)
+		{
+			if((a[i]=='a')||(a[i]=='e')||(a[i]=='i')||(a[i]=='o')||(a[i]=='u')||(a[i]=='A')||(a[i]=='E')||(a[i]=='I')||(a[i]=='O')||(a[i]=='U'))
+			{
+				c++;
+			}
+		}
+		System.out.print(c);
+	}
+}
+
+//6.Print common elements from two arrays.........................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int b[]=new int[n];
+		for(int j=0;j<n;j++)
+		{
+			b[j]=sc.nextInt();
+		}
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				if(a[i]==b[j])
+				System.out.print(a[i]+" ");
+			}
+		}
+	}
+}
+			
+//7.Merge two arrays into a single array........................................
+
+Ex:- input:-{ 1 2 3 } { 10 20 30 }
+	Output:- { 1 2 3 10 20 30 }
+Ex:- input:-{ 3 6 2 8 } { 10 20 30 }
+	Output:- { 3 6 2 8 10 20 30 }
+
+import java.util.Scanner;
+class S
+{
+	public static void main(String[]args)
+	{
+		 Scanner sc=new Scanner(System.in);
+		 int n1=sc.nextInt();
+		 int a[]=new int[n1];
+		for(int i=0;i<n1;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int n2=sc.nextInt();
+		int b[]=new int[n2];
+		for(int i=0;i<n2;i++)
+		{
+			b[i]=sc.nextInt();
+		}
+		int c[]=new int[n1+n2];
+		int i=0;
+
+		for(int j=0;j<n1;j++)
+		{
+			c[i]=a[j];
+			i++;
+		}
+		for(int j=0;j<n2;j++)
+		{
+			c[i]=b[j];
+			i++;
+		}
+		for(int k=0;k<(n1+n2);k++)
+		{
+			System.out.print(c[k]+" ");
+		}
+	}
+}
+
+//8.CVCORP
+  CVCOR
+  CVCO
+  CVC
+  CV
+  C...................................
+
+ import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n =sc.nextInt();
+		char []a=new char[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.next().charAt(0);
+		}
+		int c=n;
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<c;j++)
+			{
+				System.out.print(a[j]);
+			}
+			c--;
+			
+			System.out.println();
+		}
+	}
+}
+
+
+                               
+//10.Find the smallest permutation number of a given number...............................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int t=n;
+		int c=0;
+		while(t>0)
+		{
+			int r=t%10;
+			c++;	t=t/10;
+		}
+		int a[]=new int[c];
+		for(int i=0;i<c;i++)
+		{
+			a[i]=n%10;
+			n=n/10;
+		}
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=i+1;j<a.length;j++)
+			{ 
+
+				 if(a[i]>a[j])
+				{
+					int e=a[i];
+					a[i]=a[j];
+					a[j]=e;
+				}
+			}
+		}
+			int count=0;
+		for(int i=0;i<a.length;i++)
+		{
+			if(a[i]==0)
+			count++;
+		}
+		
+			
+			if(count==n)
+			{
+				System.out.println("no permutations");	
+			} 
+			else 	
+			{
+				int temp=a[0];
+				a[0]=a[count];	
+			        a[count]=temp;	
+			}
+				
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+		
+			
+
+//11.Print the every Digit for Digit times in a increasing order of Digits in a given number.......................
+Ex:- Input:- 250		output:- 2255555
+Ex:- Input:- 251		output:- 12255555
+Ex:- Input:- 4352		output:- 22333444455555		
+		
+import java.util.Scanner;
+class S
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);	
+		int n=sc.nextInt();
+		int c=0, t=n;
+		while(t>0)
+		{
+			int r=t%10;
+			c++;
+			t=t/10;
+		}
+		int a[]=new int[c];
+		for(int i=0;i<c;i++)
+		{
+			a[i]=n%10;
+			n=n/10;
+			
+		}
+		for(int i=0;i<c;i++)
+		{
+			for(int j=0;j<c;j++)
+			{
+
+				if(a[i]<a[j])
+				{
+					int r=a[i];a[i]=a[j];a[j]=r;
+				}
+			}
+
+		}
+			for(int i=0;i<c;i++)
+			{
+				for(int j=1;j<=a[i];j++)
+				{
+					System.out.print(a[i]+" ");
+				}
+					System.out.println();
+			}
+
+	}
+}
+
+//12.Take the 4 array values form the user and print the values in a following order?
+Input1: {3,4,2,5},	 Output1: {3,5,10,12}
+Input2: {6,8,2,3},	 Output2: {6,8,11,13,16,18,21,23}....................................................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int e=a[0];
+		for(int i=1;i<=a[1];i++)
+		{
+			if(i==1)	
+			{
+				
+				System.out.print(e+" ");
+			}
+			else if((i!=1)&&(i%2==1))
+			{
+				e=e+a[3];
+				System.out.print(e+" ");
+			}
+
+			else
+			{
+			e=e+a[2];
+			System.out.print(e+" ");
+			}
+			
+
+		}
+			
+	}
+}
+
+//13.Write a Program to find out the MEAN value of a Given Array..........................................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n =sc.nextInt();
+		int []a=new int[n];
+		int sum=0;
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		for(int i=0;i<n;i++)
+		{
+			sum=sum+a[i];
+		}
+		float e=(float)sum/n;
+		System.out.printf("%.2f",e);
+	}
+}
+
+//14.Write a Program to find out the MEDIAN value of a Given Array........................................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n =sc.nextInt();
+		int []a=new int[n];
+		int sum=0;
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		for(int i=0;i<n;i++)
+		{ 	int c=0;
+			for(int j=0;j<n-1-i;j++)
+			{
+				if(a[j]>a[j+1])
+				{
+					int t=a[j];
+					a[j]=a[j+1];
+					a[j+1]=t;c++;
+				}
+			}
+			if(c==0)
+			break;	
+		}
+	
+		if(n%2==1)
+		System.out.println(a[(n-1)/2]);
+		else 
+		{
+			float c=(float)(a[(n-1)/2]+a[((n-1)/2)+1])/2;
+			
+			System.out.printf("%.2f",c);
+		}
+	}
+}
+
+15.Write a Program to find out the MODE value of a Given Array...............................................
+
+class A{
+    public static void main(String args []){
+        java.util.Scanner sc= new java.util.Scanner(System.in);
+        int n=sc.nextInt();
+        int [] a= new int [n];
+        int c=0;
+        for(int i=0;i<n;i++){ a[i]=sc.nextInt(); }
+        for(int i=0;i<n;i++){
+            int f=0;
+            int max=0;
+            for(int j=0;j<n;j++){
+                if(a[i]==a[j])
+                    f++;
+            }
+            if(f>=2){
+                if(f>max){
+                    max=f;
+                    c=i;
+                }
+            }
+        }
+        System.out.print(a[c]);
+    }
+}
+
+--------------------------------------------------------------------Circular---------------------------------------------------------------------
+
+//1.Print all circular arrays. 
+Ex: input:{1,2,3}, output:{1,2,3},{2,3,1},{3,1,2}
+Ex: input:{4,2,9,1}, output:{4,2,9,1},{2,9,1,4},{9,1,4,2},{1,4,2,9}..........................
+
+import java.util.Scanner;
+class A
+	{
+	public static void main(String[]args)
+	{
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int a[]=new int[n];
+	for(int i=0;i<n;i++)
+	{
+		a[i]=sc.nextInt();
+	}
+	for(int k=0;k<n;k++)
+	
+	{
+		for(int i=0;i<n;i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+			for(int j=0;j<n-1;j++)
+			{
+				int t=a[j];
+				a[j]=a[j+1];
+				a[j+1]=t;
+			}
+		System.out.println();
+	
+	}
+		
+	
+	}
+}
+		
+
+---------------------------------------------------------------------Sub Array-------------------------------------------------------------------
+
+//1.Find all possible sub-arrays. 
+Ex:	input:{1,2,3}		 output:{1},{2},{3},{1,2},{2,3},{1,2,3}..................................
+
+import java.util.Scanner;
+class A
+{
+public static void main(String []args)
+{
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int a[]=new int[n];
+	for(int i=0;i<n;i++)
+	{
+		a[i]=sc.nextInt();
+	}
+	for(int i=0;i<n;i++)
+	{
+		for(int j=i;j<n;j++)
+		{
+	
+			for(int k=i;k<=j;k++)
+			{
+				System.out.print(a[k]+" ");
+			}
+			System.out.println();	
+		}
+	}
+}
+}
+	
+//2.Find all possible sub-Sequence. 
+Ex:	input:{1,2,3} 	output:{1},{2},{3},{1,2},{1,3},{2,3},{1,2,3}.......................................
+
+import java.util.Scanner;
+class A
+{
+public static void main(String[]args)
+	{
+	Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int s=(int)Math.pow(2,n);
+		for(int i=1;i<s;i++)
+		{
+			String c="";
+			int k=i;
+			while(k>0)
+			{
+				c=c+k%2;
+				k=k/2;
+			}
+					for(int b=0;b<=c.length()-1;b++)
+					{
+						if(c.charAt(b)=='1')
+						{
+							System.out.print(a[b]+" ");
+							
+						}
+			
+					}
+					System.out.println();
+			
+
+		}
+	}
+}
+
+		
+-------------------------------------------------------------------Searching---------------------------------------------------------------------
+
+
+//1.Ask user for input n, Search n in the array. If found print Found else print Not-Found. Using Linear Search Algorithms.................................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int c=sc.nextInt();
+		int d=0;
+		for(int i=0;i<n;i++)
+		{
+			if(a[i]==c)
+				d++;
+		}
+		if(d==0)
+		System.out.print("element not found");
+		else
+		System.out.print("element found");
+	}
+}
+
+//2.Ask user for input n, Search n in the array. If found print Found else print Not-Found. Using Binary Search Algorithms.
+(Observe the difference(Q1 & Q2))..........................................................................................................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Give length");
+
+		int n=sc.nextInt();
+		int a[]=new int [n];
+
+		System.out.println("Give searching Value");
+
+		int se=sc.nextInt();
+
+		System.out.println("Give Array Elements");
+
+		for(int i=0;i<a.length;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=i+1;j<a.length;j++)
+			{
+				if(a[i]>a[j])
+				{
+					int t=a[i];
+					a[i]=a[j];
+					a[j]=t;
+				}
+			}
+		}
+		int s=0,e=n-1;
+		while(s<=e)
+		{
+			int m=(s+e)/2;
+			if(a[m]==se)
+			{
+				System.out.print("Element Found");
+				break;
+			}
+			else if(a[m]<se)
+			{
+				s=m+1;
+			}
+			else
+			{
+				e=m-1;
+			}
+		}
+		if(s>e)
+		System.out.print("Element Not Found");
+	}	
+}
+				
+
+----------------------------------------------------------------------Lcm/Gcd--------------------------------------------------------------------
+
+
+//1.Find the LCM of given array elements?....................................................
+
+class A{
+    public static void main(String args[]){
+        java.util.Scanner sc= new java.util.Scanner(System.in);
+        int n=sc.nextInt();
+        int [] a= new int [n];
+        int max=Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+            if(a[i]>max)
+                max=a[i];
+        }
+        for(int i=max; ;i=i+max){
+            int c=0;
+            for(int j=0;j<n;j++){
+                if(i%a[j]!=0){
+                    c++;
+                }
+            }
+            if(c==0){
+                System.out.print(i);
+                break;
+            }
+        }
+    }
+}
+
+//2.Find the GCD of given array elements?..........................................
+
+import java.util.Scanner;
+class A
+	{
+		public static void main(String[]args)
+		{	
+			Scanner sc=new Scanner(System.in);
+			int n=sc.nextInt();
+			int a[]=new int[n];
+			int min=Integer.MAX_VALUE;
+			for(int i=0;i<n;i++)
+			{
+				a[i]=sc.nextInt();
+				if(min>a[i])
+					min=a[i];
+			}
+			while(min>0)
+			{
+				int c=0;
+				for(int j=0;j<n;j++)
+				{
+					if(a[j]%min==0)
+					{
+						c++;
+					}
+				}
+				if(c==n)
+				{
+					System.out.print(min);
+
+					break;
+				}
+				min--;
+			}
+	}
+}
+					
+
+//3.Find the LCM of all odd Numbers in a given array?......................
+
+class A{
+    public static void main(String args[]){
+        java.util.Scanner sc= new java.util.Scanner(System.in);
+        int n=sc.nextInt();
+        int [] a= new int [n];
+        int max=Integer.MIN_VALUE;
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+            if(a[i]>max)
+                max=a[i];
+        }
+        for(int i=max; ;i=i+max){
+            int c=0;
+            for(int j=0;j<n;j++){
+                if(i%a[j]!=0 && a[j]%2==1){
+                    c++;
+                }
+            }
+            if(c==0){
+                System.out.print(i);
+                break;
+            }
+}
+}
+}
+
+------------------------------------------------------------------Frequency/Duplicates------------------------------------------------------------
+
+
+1.Find frequency array. 
+Ex: Input: {2,2,2,4,3,4,5,5,6,7} output: {3,3,3,2,1,2,2,2,1,1}......................................
+
+class A{
+    public static void main(String args []){
+        java.util.Scanner sc= new java.util.Scanner(System.in);
+        int n=sc.nextInt();
+        int a[] = new int [n];
+        for(int i=0;i<n;i++){
+            a[i]= sc.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
+            int c=0;
+            for(int j=0;j<n;j++)
+            {
+                if(a[i]==a[j])
+                    c++;
+                    
+            }
+             System.out.print(c+" ");
+        }
+    }
+}
+
+2.Count number of unique elements from array.......................................
+Ex: Input: {100,3,7,7,4,8,3} output: 3
+
+class A{
+    public static void main(String args []){
+        java.util.Scanner sc= new java.util.Scanner(System.in);
+        int n=sc.nextInt();
+        int [] a= new int [n];
+        int c=0;
+        for(int i=0;i<n;i++){ a[i]=sc.nextInt(); }
+        for(int i=0;i<n;i++){
+            int f=0;
+            for(int j=0;j<n;j++)
+            {
+                if(a[i]==a[j])
+                    f++;
+            }
+            if(f==1){
+                c++;
+            }
+        }
+        System.out.print(c);
+    }
+}
+
+3.Find the least unique number from array.....................................
+
+import java.util.Scanner;
+class A{
+    public static void main(String args [])
+	{
+       		 Scanner sc= new Scanner(System.in);
+       		 int n=sc.nextInt();
+       		 int [] a= new int [n];
+        	for(int i=0;i<n;i++)
+		{ 
+			a[i]=sc.nextInt();
+ 		}
+		int min=Integer.MAX_VALUE;
+      	 	 for(int i=0;i<n;i++)
+		{
+          	  int f=0;
+       
+          		  for(int j=0;j<n;j++)
+			 {
+              	 		 if(a[i]==a[j])
+                   		 f++;
+           	 	 }
+				//System.out.print(f);
+	
+         	 if(f==1)
+		  {
+               		 if(a[i]<min)
+                   	 min=a[i];
+            	  }	
+     		   
+	}
+        System.out.print(min);
+    }
+}
+
+4.Print the most repeated number from array...............................................
+
+class A{
+    public static void main(String args []){
+        java.util.Scanner sc= new java.util.Scanner(System.in);
+        int n=sc.nextInt();
+        int [] a= new int [n];
+        int c=0;
+        for(int i=0;i<n;i++){ a[i]=sc.nextInt(); }
+        for(int i=0;i<n;i++){
+            int f=0;
+            int max=0;
+            for(int j=0;j<n;j++){
+                if(a[i]==a[j])
+                    f++;
+            }
+            if(f>=2){
+                if(f>max){
+                    max=f;
+                    c=i;
+                }
+            }
+        }
+        System.out.print(a[c]);
+    }
+}
+
+5.Count number of duplicate elements from array...........................................
+ 
+Ex: i/p:{3,3,3,2,2,1} o/p: 2	
+class A{
+    public static void main(String args []){
+        java.util.Scanner sc= new java.util.Scanner(System.in);
+        int n=sc.nextInt();
+        int [] a= new int [n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        int c=0,max=0;
+        java.util.Arrays.sort(a);
+        for(int i=0;i<n;i++){
+            c=0;
+            for(int j=0;j<n;j++){
+                if(a[i]==a[j]){
+                    c++;
+                    
+                }
+                
+            }
+            if(c>=2){
+               int s=0;
+               for(int j=0;j<i;j++){
+                   if(a[i]==a[j]){
+                       s++;
+                   }
+               }
+               if(s==0)
+               max++;
+            }
+            
+            
+            
+           
+        } 
+        System.out.print(max);
+    }
+}		
+
+-----------------------------------------------------------------------Min/Max--------------------------------------------------------------------
+
+
+1.Find the biggest element from array.............................................
+
+import java.util.Scanner;
+class max
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+	
+			int n=sc.nextInt();
+			int a[]=new int[n];
+			int max=0;
+			for(int i=0;i<a.length;i++)
+			{
+				a[i]=sc.nextInt();
+			}
+			max=a[0];
+			for(int i=0;i<a.length;i++)
+			{
+				if(max<a[i])
+				max=a[i];
+			}
+			System.out.println("max="+max);
+	}
+}
+		
+2.Find the lowest element from array.....................................
+
+import java.util.Scanner;
+class max
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+	
+			int n=sc.nextInt();
+			int a[]=new int[n];
+			int min=0;
+			for(int i=0;i<a.length;i++)
+			{
+				a[i]=sc.nextInt();
+			}
+			min=a[0];
+			for(int i=0;i<a.length;i++)
+			{
+				if(min>a[i])
+				min=a[i];
+			}
+			System.out.println("min="+min);
+	}
+}
+		
+3.Find the second highest element from array....................................
+
+import java.util.Scanner;
+class secondhighest
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+	
+			int n=sc.nextInt();
+			int a[]=new int[n];
+			int max=0;
+			int max2=Integer.MIN_VALUE;
+			for(int i=0;i<a.length;i++)
+			{
+				a[i]=sc.nextInt();
+			}
+			max=a[0];
+			for(int i=0;i<a.length;i++)
+			{
+				if(a[i]>max)
+				{
+					max2=max;
+					max=a[i];
+				}
+				else if(max2<a[i] && a[i]<max)
+				{
+					max2=a[i];
+				}
+			}
+			System.out.println("max2="+max2);
+	}
+}
+		
+
+4.Find N th largest element from array........................................
+Ex:	Input: 8
+			5 8 1 3 9 55 6 7
+			4
+		Output:  7
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int max=Integer.MAX_VALUE;
+		int c=sc.nextInt();
+		while(c>0)
+		{
+			int min=Integer.MIN_VALUE;
+			for(int i=0;i<a.length;i++)
+			{
+				if(min<a[i] && a[i]<max)
+				{
+					min=a[i];
+				}	
+			}
+			max=min;c--;
+		}
+		System.out.print(max);
+	}
+}
+			
+
+ -------------------or or or----------------------------------------------------
+
+  import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int c=sc.nextInt();
+		for(int i=0;i<n;i++)
+		{
+			for(int j=i+1;i<n;i++)
+			{		
+				if(a[i]>a[j])
+				{
+					int t=a[i];a[i]=a[j];a[j]=t;
+				}
+			}
+		}
+		System.out.print(a[a.length-c]);
+
+	}
+}
+
+
+5.Find the first three biggest elements from given array by using single loop?(without using pre-define Methods)..................................
+
+
+6.Find the number of consonants in a given character array............................................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		char a[]=new char[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.next().charAt(0);
+		}
+		int c=0;
+		for(int i=0;i<n;i++)
+		{
+			if((a[i]=='a')||(a[i]=='e')||(a[i]=='i')||(a[i]=='o')||(a[i]=='u')||(a[i]=='A')||(a[i]=='E')||(a[i]=='U')||(a[i]=='I')||(a[i]=='O'))
+			{
+				c++;
+			}
+		}
+		System.out.print(c);
+	}
+}
+
+
+7.Find the no of numbers below the key value in a Given array?
+Input:	5
+		5 9 47 23 19
+		24
+Output:	5 9 23 19..........................................................................................
+
+import java.util.Scanner;
+class A
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int c=sc.nextInt();
+		for(int i=0;i<n;i++)
+		{
+			if(a[i]<c)
+			{
+				System.out.print(a[i]+" ");
+			}
+		}
+	}
+}
+				
+
+8.Find the 1st four smallest numbers missing from the Given array? 
+Ex:- 7 { 4 , 10 , 7 , 19 , 22 , 29 , 11 }   	output:- 5 6 8 9.....................................................................
+
+
+----------------------------------------------------------------------------Sorting--------------------------------------------------------------------------
+
+1.Write a Program for Bubble Sort of a Given Array elements.......................................... 
+
+import java.util.Scanner;
+class bubblesort1
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
+            int c=0;
+            for(int j=0;j<n-1-i;j++)
+            {
+                if(a[j]>a[j+1])
+                {
+                    int t=a[j];
+                    a[j]=a[j+1];
+                    a[j+1]=t;
+                    c++;
+                }
+            }
+            if(c==0)
+            break;
+        }
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(a[i]+" ");
+        }
+    }
+}
+
+2.Write a Program for Selection Sort of a Given Array elements..........................................
+
+import java.util.Scanner;
+class selectionsort1
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		{
+			int n=sc.nextInt();
+			int a[]=new int[n];
+			for(int i=0;i<n;i++)
+			{
+				a[i]=sc.nextInt();
+			}
+			for(int i=0;i<n;i++)
+			{
+				int m=i;
+				for(int j=i+1;j<n;j++)
+				{
+					if(a[m]>a[j])
+					{
+						m=j;
+					}
+				}
+				int t=a[m];
+				a[m]=a[i];
+				a[i]=t;
+			}
+			for(int i=0;i<n;i++)
+			{
+				System.out.print(a[i]+" ");
+			}
+		}
+	}
+}
+
+3.Write a Program for Insertion Sort of a Given Array elements........................................ 
+
+class A{
+    public static void main(String args []){
+        java.util.Scanner sc= new java.util.Scanner(System.in);
+        int n=sc.nextInt();
+        int a[] = new int [n];
+        int b[] = new int[n];
+        for(int i=0;i<n;i++){ a[i]=sc.nextInt(); }
+        for(int i=1;i<n;i++){
+           int j=0,k=a[i];
+           for( j=i-1;j>=0;j--){
+               if(k<a[j]){
+                   a[j+1]=a[j];
+               }
+               else{
+                   break;
+               }
+           }a[j+1]=k;
+        }
+        for(int i=0;i<n;i++){ System.out.print(a[i]+" "); }
+        
+        
+        
+        
+    }
+}
+
+4.Write a Program for Quick Sort of a Given Array elements...................................................
+
+class A{
+    public static void main(String args []){
+        java.util.Scanner sc= new java.util.Scanner(System.in);
+        int n=sc.nextInt();
+        int a []= new int [n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+         sort(a, 0, n-1);
+        
+        for(int i=0;i<n;i++){
+            System.out.print(a[i]+"  ");
+        }
+    }
+
+
+
+  
+   public static int partition(int arr[], int low, int high)
+    {
+        int pivot = arr[high];
+        int i = (low-1); 
+        for (int j=low; j<high; j++)
+        {
+           
+            if (arr[j] <= pivot)
+            {
+                i++;
+ 
+                
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+ 
+       
+        int temp = arr[i+1];
+        arr[i+1] = arr[high];
+        arr[high] = temp;
+ 
+        return i+1;
+    }
+ 
+ 
+   
+   public static  void sort(int arr[], int low, int high)
+    {
+        if (low < high)
+        {
+           
+            int pi = partition(arr, low, high);
+ 
+            
+            sort(arr, low, pi-1);
+            sort(arr, pi+1, high);
+        }
+    }
+ 
+   
+} 
+
+5.Write a Program for Merge Sort of a Given Array elements................................................................... 
+
+class MergeSort
+{
+    
+    void merge(int arr[], int l, int m, int r)
+    {
+        
+        int n1 = m - l + 1;
+        int n2 = r - m;
+ 
+        
+        int L[] = new int [n1];
+        int R[] = new int [n2];
+ 
+    
+        for (int i=0; i<n1; ++i)
+            L[i] = arr[l + i];
+        for (int j=0; j<n2; ++j)
+            R[j] = arr[m + 1+ j];
+ 
+ 
+       
+        int i = 0, j = 0;
+ 
+       
+        int k = l;
+        while (i < n1 && j < n2)
+        {
+            if (L[i] <= R[j])
+            {
+                arr[k] = L[i];
+                i++;
+            }
+            else
+            {
+                arr[k] = R[j];
+                j++;
+            }
+            k++;
+        }
+ 
+    
+        while (i < n1)
+        {
+            arr[k] = L[i];
+            i++;
+            k++;
+        }
+ 
+        
+        while (j < n2)
+        {
+            arr[k] = R[j];
+            j++;
+            k++;
+        }
+    }
+ 
+   
+    void sort(int arr[], int l, int r)
+    {
+        if (l < r)
+        {
+    
+            int m = (l+r)/2;
+ 
+
+            sort(arr, l, m);
+            sort(arr , m+1, r);
+ 
+        
+            merge(arr, l, m, r);
+        }
+    }
+ 
+    
+    public static void main(String args[])
+    {
+        java.util.Scanner sc= new java.util.Scanner(System.in);
+        int n=sc.nextInt();
+        int a [] = new int [n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+       
+ 
+        MergeSort ob = new MergeSort();
+        ob.sort(a, 0, a.length-1);
+        for(int i=0;i<n;i++){
+            System.out.print(a[i]+"  ");
+        }
+       
+    }
+}
